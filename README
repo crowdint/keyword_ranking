@@ -1,0 +1,19 @@
+Keyword Ranking
+
+Use this gem to calculate the keyword ranking in Bing, Yahoo or Google as follows:
+
+get_ranking(:keyword => 'one_keyword', :url => 'www.mydomain.com', :engine => :bing, :limit => 100)
+
+Note:
+
+* :engine can receive any of these values -->  :google, :yahoo or :bing
+* :limit by default is 200 (defined in RES_LIMIT constant)
+* You can change the results per page desired changing the value of RES_PER_PAGE having in mind that not all the 3 engines support more than 10 results per page with this utility
+
+More updates comming
+
+TODO:
+
+* Testing code
+* GEM for Rails structure
+
