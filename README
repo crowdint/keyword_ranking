@@ -10,7 +10,7 @@ Note:
 * :limit by default is 200 (defined in RES_LIMIT constant)
 * You can change the results per page desired changing the value of RES_PER_PAGE having in mind that not all the 3 engines support more than 10 results per page with this utility
 
-More updates comming
+More updates coming
 
 TODO:
 
