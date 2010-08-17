@@ -9,11 +9,46 @@ module KeywordRanking
 
     describe Ranking do
 
-      describe "#start" do
-        it "creates a ranking instance" do
-          Ranking.instance.should_not be(nil)
+      let (:options) { {:keyword => 'agile', :url => 'www.crowdint.com', :engine => 'google', :limit => 20} }
+      let(:ranking) { Ranking.instance }
+      subject { ranking }
+
+      context '#get ranking fails' do
+
+
+        it 'without parameters' do
+          lambda { get }.should raise_exception
+        end
+
+        it 'with unsupported engine' do
+          lambda { get(options.merge({:engine => 'mugle'})) }.should raise_exception
         end 
+
+        it 'exceeding results limit' do
+          lambda { get(options.merge({:limit => 201})) }.should raise_exception
+        end 
+
+        it 'with bad keyword and url data types' do
+          lambda { get(options.merge({:keyword  => 1000, :url => 1.2})) }.should raise_exception
+        end 
+
+        it 'using malformed URLs'
+
       end 
+
+      context '#get ranking success' do
+
+        it 'with correct parameters on google'
+
+        it 'with correct parameters on yahoo'
+
+        it 'with correct parameters on bing'
+
+        it 'should support multiple keywords'
+
+        it 'should support a symbol as an engine name'
+
+      end
 
     end 
 
