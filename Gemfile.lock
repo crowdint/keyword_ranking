@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    keyword_ranking (1.0)
+      nokogiri
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -6,6 +12,7 @@ GEM
       rubyforge
     gemcutter (0.6.1)
     json_pure (1.4.6)
+    nokogiri (1.4.3.1)
     rspec (1.3.0)
     rubyforge (2.0.4)
       json_pure (>= 1.1.7)
@@ -14,5 +21,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   echoe
+  keyword_ranking!
+  nokogiri
   rspec

@@ -1,3 +1,9 @@
 source :gemcutter
-gem 'echoe'
-gem 'rspec', :group => 'test'
+
+gemspec
+
+group 'development' do
+  gem 'echoe'
+  gem 'rspec'
+  gem 'nokogiri'
+end
