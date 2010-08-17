@@ -32,6 +32,7 @@ module KeywordRanking
     end
 
     def find_ranking(keyword, site, limit, engine)
+      keyword.gsub!(/\s/, '+')
       request_url, results_container, cite_container = case engine.to_sym
       when :bing
         ["http://www.bing.com/search?q=#{keyword}&count=#{RES_PER_PAGE}&first=", '#wg0 > li', 'cite']
@@ -46,7 +47,7 @@ module KeywordRanking
         rank = results.index(results.detect{ |result| result.css(cite_container).text.match Regexp.new(site) })
         if count > RES_LIMIT
           break
-        elsif rank.present?
+      elsif rank
           rank = count + rank
           break
         end
