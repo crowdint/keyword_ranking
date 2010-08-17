@@ -16,18 +16,22 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{keyword_ranking}
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Create keyword rankings from Google, Yahoo and Bing}
-
-  s.add_dependency "nokogiri"
-  s.add_development_dependency "bundler"
+  s.summary = %q{Get keyword rankings from Google, Yahoo and Bing}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<nokogiri>, [">= 1.4.3.1"])
+      s.add_development_dependency(%q<bundler>, [">= 0.9.26"])
     else
+      s.add_dependency(%q<nokogiri>, [">= 1.4.3.1"])
+      s.add_dependency(%q<bundler>, [">= 0.9.26"])
     end
   else
+    s.add_dependency(%q<nokogiri>, [">= 1.4.3.1"])
+    s.add_dependency(%q<bundler>, [">= 0.9.26"])
   end
 end
+
