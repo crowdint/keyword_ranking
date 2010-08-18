@@ -33,11 +33,13 @@ module KeywordRanking
       raise "Engine should be 'bing', 'google' or 'yahoo'" unless [:bing, :google, :yahoo].include?(options[:engine].to_sym)
     end
 
+<<<<<<< HEAD:lib/keyword_ranking.rb
   end
 
   class Finder
 
     def find(keyword, site, limit, engine)
+      keyword.gsub!(/\s/, '+')
       request_url, results_selector, cite_selector = case engine.to_sym
       when :bing
         ["http://www.bing.com/search?q=#{keyword}&count=#{RES_PER_PAGE}&first=", '#wg0 > li', 'cite']
