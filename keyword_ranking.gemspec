@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2010-08-17}
   s.description = %q{Create keyword rankings from the 3 major search engines}
   s.email = %q{whizkas@hotmail.com}
-  s.extra_rdoc_files = ["CHANGELOG", "LICENSE", "README", "lib/keyword_ranking.rb"]
-  s.files = ["CHANGELOG", "Gemfile", "LICENSE", "README", "Rakefile", "lib/keyword_ranking.rb", "spec/keyword_ranking_spec.rb", "spec/spec.opts", "keyword_ranking.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "LICENSE", "README.markdown", "lib/keyword_ranking.rb"]
+  s.files = ["CHANGELOG", "Gemfile", "LICENSE", "README.markdown", "Rakefile", "lib/keyword_ranking.rb", "spec/keyword_ranking_spec.rb", "spec/spec.opts", "keyword_ranking.gemspec"]
   s.homepage = %q{http://github.com/crowdint/keyword_ranking}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Keyword_ranking", "--main", "README"]
   s.require_paths = ["lib"]
