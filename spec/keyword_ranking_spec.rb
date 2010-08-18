@@ -1,9 +1,18 @@
-$LOAD_PATH << File.expand_path('../../lib' , __FILE__)
+require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-require 'rubygems'
-require 'bundler'
-Bundler.setup(:development)
-require 'keyword_ranking'
+# describe "KeywordRanking" do
+#   it "fails" do
+#     fail "hey buddy, you should probably rename this file and start specing for real"
+#   end
+# end
+# 
+# 
+# # $LOAD_PATH << File.expand_path('../../lib' , __FILE__)
+# # 
+# # require 'rubygems'
+# # require 'bundler'
+# # Bundler.setup(:development)
+# # require 'keyword_ranking'
 
 module FinderSpecHelper
   class Finder
