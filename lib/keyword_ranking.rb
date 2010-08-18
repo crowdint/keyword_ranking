@@ -33,7 +33,6 @@ module KeywordRanking
       raise "Engine should be 'bing', 'google' or 'yahoo'" unless [:bing, :google, :yahoo].include?(options[:engine].to_sym)
     end
 
-<<<<<<< HEAD:lib/keyword_ranking.rb
   end
 
   class Finder
