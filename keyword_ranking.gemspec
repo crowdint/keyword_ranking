@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = %q{whizkas@hotmail.com}
   s.extra_rdoc_files = ["CHANGELOG", "LICENSE", "README", "lib/keyword_ranking.rb"]
   s.files = ["CHANGELOG", "Gemfile", "LICENSE", "README", "Rakefile", "lib/keyword_ranking.rb", "spec/keyword_ranking_spec.rb", "spec/spec.opts", "keyword_ranking.gemspec"]
-  s.homepage = %q{http://github.com/whizkas/keyword_ranking}
+  s.homepage = %q{http://github.com/crowdint/keyword_ranking}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Keyword_ranking", "--main", "README"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{keyword_ranking}
