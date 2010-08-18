@@ -5,31 +5,37 @@ require 'bundler'
 Bundler.setup(:development)
 require 'keyword_ranking'
 
+module FinderSpecHelper
+  class Finder
+    def find(keyword, site, limit, engine)
+      0
+    end
+  end
+end
+
 module KeywordRanking
 
     describe Ranking do
 
       let (:options) { {:keyword => 'agile', :url => 'www.crowdint.com', :engine => 'google', :limit => 20} }
-      let(:ranking) { Ranking.instance }
-      subject { ranking }
+      let(:ranking) { Ranking.new(FinderSpecHelper::Finder.new) }
 
       context '#get ranking fails' do
 
-
         it 'without parameters' do
-          lambda { get }.should raise_exception
+          lambda { ranking.get }.should raise_exception
         end
 
         it 'with unsupported engine' do
-          lambda { get(options.merge({:engine => 'mugle'})) }.should raise_exception
+          lambda { ranking.get(options.merge({:engine => 'mugle'})) }.should raise_exception
         end 
 
         it 'exceeding results limit' do
-          lambda { get(options.merge({:limit => 201})) }.should raise_exception
+          lambda { ranking.get(options.merge({:limit => 201})) }.should raise_exception
         end 
 
         it 'with bad keyword and url data types' do
-          lambda { get(options.merge({:keyword  => 1000, :url => 1.2})) }.should raise_exception
+          lambda { ranking.get(options.merge({:keyword  => 1000, :url => 1.2})) }.should raise_exception
         end 
 
         it 'using malformed URLs'
@@ -38,7 +44,9 @@ module KeywordRanking
 
       context '#get ranking success' do
 
-        it 'with correct parameters on google'
+        it 'with correct parameters on google' do
+          ranking.get(options).should equal 0
+        end
 
         it 'with correct parameters on yahoo'
 
