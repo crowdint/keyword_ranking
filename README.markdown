@@ -2,7 +2,7 @@
 
 Use this gem to calculate the keyword ranking for *Bing*, *Yahoo* or *Google* as follows:
 
-KeywordRanking::Ranking.new(:keyword => 'one keyword', :url => 'www.mydomain.com', :limit => 100).from_google
+Ranking.new(:keyword => 'one keyword', :url => 'www.mydomain.com', :limit => 100).from_google
 
 ##Note
 

@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{keyword_ranking}
-  s.version = "1.1.0"
+  s.version = "1.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Luis Velasco"]
-  s.date = %q{2010-08-18}
+  s.date = %q{2010-08-19}
   s.description = %q{Ruby library to get the ranking of a url based on a keyword in Bing, Yahoo or Google}
-  s.email = %q{luis.velasco@crowdint.com}
+  s.email = %q{luisalberto.velasco@crowdint.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.markdown"
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "keyword_ranking.gemspec",
      "lib/keyword_ranking.rb",
      "spec/keyword_ranking_spec.rb",
      "spec/spec.opts",
@@ -35,8 +36,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Ruby library to get the ranking of a url based on a keyword in Bing, Yahoo or Google}
   s.test_files = [
-    "spec/keyword_ranking_spec.rb",
-     "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+     "spec/keyword_ranking_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
